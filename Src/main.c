@@ -4,7 +4,7 @@
   * Description        : Main program body
   ******************************************************************************
   *
-  * COPYRIGHT(c) 2016 STMicroelectronics
+  * COPYRIGHT(c) 2016 STMicroelectronics and Gilbert Brault
   *
   * Redistribution and use in source and binary forms, with or without modification,
   * are permitted provided that the following conditions are met:
@@ -115,6 +115,10 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
+		// check if a command is pending (from USART)
+		// command code
+		// 0 Stop sending
+		// 1 Start sending
 		uint8_t command[1];
 		HAL_StatusTypeDef res;
 		res = HAL_UART_Receive(&huart2, command, 1, 0x0000);
@@ -123,8 +127,11 @@ int main(void)
 			state = command[0];
 		}
 
+		// toggle LED 2 to show activity
 		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
 
+		// depending on state (from USART) and Ready (from DMA)
+		// transmit microphone Data in ASCII or Binary
 		if ((state==1) && (Ready == 1)) {
 			int i;
 			char buf[4];

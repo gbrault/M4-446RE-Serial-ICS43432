@@ -26,6 +26,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>Inc</name>
+			<type>2</type>
+			<location>C:/Users/gbrau/git/NucleHal/M4-446RE-Serial-ICS43432/Inc</location>
+		</link>
+		<link>
 			<name>M4-446RE-Serial-ICS43432.ioc</name>
 			<type>1</type>
 			<location>C:/Users/gbrau/git/NucleHal/M4-446RE-Serial-ICS43432/M4-446RE-Serial-ICS43432.ioc</location>
@@ -39,6 +44,11 @@
 			<name>Application/SW4STM32/startup_stm32f446xx.s</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f446xx.s</locationURI>
+		</link>
+		<link>
+			<name>Application/User/codec.cpp</name>
+			<type>1</type>
+			<location>C:/Users/gbrau/git/NucleHal/M4-446RE-Serial-ICS43432/Src/codec.cpp</location>
 		</link>
 		<link>
 			<name>Application/User/main.c</name>
